@@ -41,4 +41,22 @@ public class Livro {
     public Long getId() {
         return id;
     }
+
+	public TipoCirculacao getCirculacao() {
+		return circulacao;
+	}
+
+	public boolean verificaCirculacao(String tipo) {
+		boolean retorno = false;
+		
+		if (this.circulacao.toString().equals(tipo)) {
+			retorno = true;
+		}
+		
+		System.out.println("teste: "+retorno);
+		return retorno;
+	}
+    
+    
+    
 }
