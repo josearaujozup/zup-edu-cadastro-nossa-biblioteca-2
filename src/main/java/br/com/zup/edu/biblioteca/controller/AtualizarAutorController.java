@@ -29,10 +29,12 @@ public class AtualizarAutorController {
 		
 		Autor autor = repository.findById(idAutor).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,"Autor não cadastrado"));
 		
-		autor.setNome(request.getNome());
-		autor.setCpf(request.getCpf());
-		autor.setDescricao(request.getDescricao());
-		autor.setEmail(request.getEmail());
+//		autor.setNome(request.getNome());
+//		autor.setCpf(request.getCpf());
+//		autor.setDescricao(request.getDescricao());
+//		autor.setEmail(request.getEmail());
+		
+		autor.atualiza(request.getNome(), request.getEmail(), request.getDescricao(),request.getCpf());
 		
 		repository.save(autor);
 		

@@ -55,4 +55,11 @@ public class Autor {
 		this.cpf = cpf;
 	}
     
+	public void atualiza(String nome, String email, String descricao, String cpf) {
+        this.nome=nome;
+        this.email=email;
+        this.descricao=descricao;
+        this.cpf=cpf;
+    }
+	
 }
